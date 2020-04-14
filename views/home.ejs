@@ -1,0 +1,51 @@
+<%- include("partials/header") %>   
+
+
+<div id="container">
+<form action="/newItem" method="POST"> 
+        <div class="header">
+        <h1>Nákup</h1>
+	
+        <select name="person">
+            <option value="">Vyber osobu...</option>
+            <option value="mamka">mamka</option>
+            <option value="tato">tato</option>
+            <option value="vladko">vladko</option>
+        </select>
+		
+    </div>
+	
+	
+        <input type="text" oninvalid="this.setCustomValidity('Nezabúdaj na toto!')" oninput="this.setCustomValidity('')" name="newItem" placeholder="Pridaj Tovar" required>
+	<button type="submit"> 
+			Pridaj do zoznamu
+		</button>
+	</form>
+	       <form action="/removeAllItems" method="GET"> 
+	<button value="Vymaž">Vymaž všetko</button>
+
+	</form>
+	<form action="/removeItem" method="POST"> 
+	 <ul>
+			<% cart.forEach(function(thing){ %>
+		 <li><span><button name="<%= thing.item %>" onclick=deleteThis() class='fa fa-trash rem'></button></span><%= thing.item %><em><%= thing.person %></em></li>
+		 </form>
+
+			<% }) %>
+	</ul>
+		
+  
+		</div>
+
+<script> 
+
+function deleteThis(){
+ 	document.querySelectorAll("li").forEach(function(e){
+	e.addEventListener("click",function(){return this.textContent})
+}) 
+	}
+</script>
+
+
+<%- include("partials/footer") %>    
+	
