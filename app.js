@@ -3,9 +3,9 @@ var express       = require("express"),
 	bodyParser    = require("body-parser"),
 	mongoose      = require("mongoose")
 app.use(bodyParser.urlencoded({extended: true}))
-
+require('dotenv').config()
 mongoose.set('useUnifiedTopology', true);
-mongoose.connect("mongodb://localhost/nakupny_kosik", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/nakupny_kosik", { useNewUrlParser: true });
 
 var itemSchema = new mongoose.Schema({
 	item: String,
@@ -63,6 +63,5 @@ app.get("/removeAllItems",function(req, res){
 	res.redirect("/")
 })
 
-app.listen(3000, function(){
-	console.log("Server started!")
-})
+const port = process.env.PORT || 3000;
+app.listen(port);
