@@ -43,10 +43,14 @@ span{
     text-align: center;
     color: white;
     display: inline-block;
-    width: 0px;
-    transition: 0.2s linear;
-    opacity: 0;
+    width: 40px;
+  /*   transition: 0.2s linear;
+    opacity: 0; */
 }
+/* li:hover span{
+    width: 40px;
+    opacity: 1.0;
+} */
 em{
    float: right;
    padding-right: 10px;
@@ -54,10 +58,7 @@ em{
    font-size: small;
    color: rgba(231, 76, 60, 0.5);
 }
-li:hover span{
-    width: 40px;
-    opacity: 1.0;
-}
+
 .completed{
     color: gray;
     text-decoration: line-through;
