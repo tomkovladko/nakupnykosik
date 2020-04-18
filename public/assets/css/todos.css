@@ -110,17 +110,15 @@ body{
 }
 
 .leftMain {
-    background: blue;
     width: 50%;
     height: 100%;
 }
 
 .rightMain{
-    background: red;
     width: 50%;
     height: 100%;
 }
 
-h1Main{
+.h1Main{
     margin: 45%
 }
