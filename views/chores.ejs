@@ -15,10 +15,13 @@
 		
     </div>
 	
+	<div id="fix">
+		
 	
         <input type="text" oninvalid="this.setCustomValidity('Nezabúdaj na toto!')" oninput="this.setCustomValidity('')" name="newItem" placeholder="Pridaj Tovar" required>
-		<button type="submit"><i class="fa fa-check" aria-hidden="true"></i>
-		</button>
+	<button id="subButton" type="submit"><i class="fa fa-check" aria-hidden="true"></i></button>
+
+		</div>
 	</form>
 	       <form action="/removeAllItemsPrace" method="GET"> 
 	<button value="Vymaž">Vymaž všetko</button>

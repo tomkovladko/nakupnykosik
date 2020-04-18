@@ -145,4 +145,14 @@ a:link {
   a:active {
     text-decoration: underline;
   }
-
+  #fix{
+	display: flex;
+	flex-direction: row
+}
+#subButton{
+	margin:0;
+	padding: 0;
+	height: 57px;
+	align-items: center;
+	justify-content: center
+}
