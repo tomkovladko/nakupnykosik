@@ -64,13 +64,18 @@ app.post("/newItem", function(req,res){
 	var newItem = req.body.newItem
 	var person = req.body.person
 	var everything = {item:newItem, person:person}
-	Item.create(everything,(err,newlyCreated)=>{
-		if(err){
-			console.log("Error")
-		}else{
-			res.redirect("/nakup")
-		}
-	})
+	if(newItem != ""){
+		Item.create(everything,(err,newlyCreated)=>{
+			if(err){
+				console.log("Error")
+			}else{
+				res.redirect("/nakup")
+			}
+		})
+	}else{
+		res.redirect("/nakup")
+	}
+	
 })   
 
 app.post("/removeItem", function(req,res){
