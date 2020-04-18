@@ -2,7 +2,7 @@
 
 
 <div id="container">
-<form action="/newItem" method="POST"> 
+<form action="/newItemPrace" method="POST"> 
         <div class="header">
         <h1>Nákup</h1>
 	
@@ -20,11 +20,11 @@
 			Pridaj do zoznamu
 		</button>
 	</form>
-	       <form action="/removeAllItems" method="GET"> 
+	       <form action="/removeAllItemsPrace" method="GET"> 
 	<button value="Vymaž">Vymaž všetko</button>
 
 	</form>
-	<form action="/removeItem" method="POST"> 
+	<form action="/removeItemPrace" method="POST"> 
 	 <ul>
 			<% cart.forEach(function(thing){ %>
 		 <li><span><button name="<%= thing.item %>" onclick=deleteThis() class='fa fa-trash rem'></button></span><%= thing.item %><em><%= thing.person %></em></li>
