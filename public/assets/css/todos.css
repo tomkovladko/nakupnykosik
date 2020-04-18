@@ -119,11 +119,9 @@ body{
 	background: rgba(0,0,0,0.1)
 }
 
-
-
 .h1Main{
 	width: 30%;
-    margin-top: 300px
+    margin-top: 300px;
     border: none
 }
 .aMain{
