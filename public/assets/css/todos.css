@@ -98,7 +98,7 @@ input[type="text"]:focus{
     background: #f7f7f7;
     margin: 10px auto;
 }
-////////////////////////////////////////////////////////
+
 body{
     margin: 0;
     padding: 0
@@ -109,16 +109,25 @@ body{
     height: 100vh;
 }
 
-.leftMain {
-    width: 50%;
-    height: 100%;
+.leftMain, .rightMain {
+   margin: 0 auto;
 }
 
-.rightMain{
-    width: 50%;
+.aMain:hover{
+	width: 50%;
     height: 100%;
+	background: rgba(0,0,0,0.1)
 }
+
+
 
 .h1Main{
-    margin: 45%
+	width: 30%;
+    margin-top: 45%;
+	text-decoration: none
 }
+.aMain{
+	width: 50%;
+    height: 100%;
+}
+
