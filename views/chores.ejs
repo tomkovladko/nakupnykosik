@@ -1,7 +1,7 @@
 <%- include("partials/header") %>   
 
 
-<div id="container">
+<div id="container" style="background: #536976;>
     <a href="/" style="background: #536976; color:white;">Vráť sa</a>
 <form action="/newItemPrace" method="POST"> 
         <div class="header">
@@ -18,7 +18,7 @@
 	<div id="fix">
 		
 	
-        <input type="text" oninvalid="this.setCustomValidity('Nezabúdaj na toto!')" oninput="this.setCustomValidity('')" name="newItem" placeholder="Pridaj Tovar" required>
+        <input type="text" oninvalid="this.setCustomValidity('Nezabúdaj na toto!')" oninput="this.setCustomValidity('')" name="newItem" placeholder="Pridaj Úlohu" required>
 	<button id="subButton" type="submit"><i class="fa fa-check" aria-hidden="true"></i></button>
 
 		</div>
